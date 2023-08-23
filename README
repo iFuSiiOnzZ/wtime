@@ -1,0 +1,31 @@
+# Overview
+`wtime` is program that determinate the duration of execution of a particular command.
+
+# Usage
+```
+wtime command
+wtime command arg1 arg2 ... argN
+```
+
+Output example:
+```
+drwx        -    NT SERVICE  TrustedInstaller  07 May  2022  Program Files
+drwx        -    NT SERVICE  TrustedInstaller  07 May  2022  Program Files (x86)
+drwx        -  NT AUTHORITY            SYSTEM  07 May  2022  Users
+drwx        -    NT SERVICE  TrustedInstaller  07 May  2022  Windows
+
+real:    0d  0h  0m  0s   6ms
+user:    0d  0h  0m  0s   0ms
+sys :    0d  0h  0m  0s   0ms
+```
+
+Output description:
+```
+real: the amount of time between the the process has exit and created
+
+user: amount of time that the process has executed in user mode.
+      This value can exceed the amount of real time if the process
+      executes across multiple CPU cores.
+
+sys : amount of time that the process has executed in kernel mode.
+```
